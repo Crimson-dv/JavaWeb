@@ -1,0 +1,36 @@
+<div class="container p-4" style="margin-top:70px ;">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">INGRESAR PEDIDO</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/addp" method="post">
+                        <div class="input-group mt-2">
+                            <label for="name" class="input-group-text">Id Cliente</label>
+                            <input class="form-control" type="int" name="id" idp="id" placeholder="Id Cliente"
+                                autofocus required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="lastname" class="input-group-text">Fecha Pedido</label>
+                            <input class="form-control" type="date" name="fechapedido" idp="fechapedido" placeholder="Fecha Pedido"
+                                required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="age" class="input-group-text">Total</label>
+                            <input class="form-control" type="decimal(10,2)" name="total" idp="total"
+                                placeholder="Total" required>
+                        </div>
+
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success"> Guardar</button>
+                            <button class="btn btn-danger"><a class="nav-link  link-light" aria-current="page"
+                                    href="/listp"> Cancelar</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

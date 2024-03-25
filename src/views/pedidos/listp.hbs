@@ -1,0 +1,58 @@
+<div class="container" style="margin-top:70px ;">
+    <div class="row mt-5">
+        <h3 class="text-center text-uppercase p-2">Lista de Pedidos</h3>
+
+        <div style="padding: 10px;">
+        <button class="btn btn-danger"><a class="nav-link  link-light" aria-current="page" href="/addp"> Nuevo Pedido</a></button>
+        </div>
+
+        {{#if pedidos}}
+        <table class="table-dark table-hover table text-center">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">Id Pedido</th>
+                    <th scope="col">Id Cliente</th>
+                    <th scope="col">Fecha Pedido</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each pedidos}}
+                <tr>
+                    <td>{{idp}}</td>
+                    <td>{{id}}</td>
+                    <td>{{fechapedido}}</td>
+                    <td>{{total}}</td>
+                    
+                    <td>
+                        <div class="">
+                            <a href="/editp/{{idp}}" class="btn btn-warning p-2">
+                                <i class="fa-solid fa-pencil"></i>Actualizar</a>
+
+                            <a href="/deletep/{{idp}}" class="btn btn-danger p-2">
+                                <i class="fa-solid fa-trash"></i>Eliminar</a>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+            <tfoot>
+                <tr class="table-dark">
+                    <td colspan="5">REGISTRO DE PEDIDOS</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    {{else}}
+    <div class="card text-center mx-auto" style="width: 350px;">
+        <div class="card-header">
+            <h3>Debes crear un pedido</h3>
+        </div>
+        <div class="card-body">
+            <p>Presiona este boton para que puedas registrar a un pedido en la aplicacion</p>
+            <a href="#" class="btn btn-primary">Ir a crear</a>
+        </div>
+        {{/if}}
+    </div>
+</div>
